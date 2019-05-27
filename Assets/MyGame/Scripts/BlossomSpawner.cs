@@ -8,6 +8,7 @@ public class BlossomSpawner : MonoBehaviour
 
     public CollectibleBlossom blossomPrefab;
     public GameObject blossomParent;
+    public Sprite[] blossomSprites;
     //public GameObject boundaryLeft;
     //public GameObject boundaryRight;
     //public GameObject boundaryTop;
@@ -41,11 +42,23 @@ public class BlossomSpawner : MonoBehaviour
     private void CloneBlossom()
     {
         float blossomSize = Random.Range(blossomMinSize, blossomMaxSize);
+        int blossomSpriteIndex = Random.Range(0, 2);
+        Debug.Log("Index: " + blossomSpriteIndex);
 
         CollectibleBlossom blossomClone = (CollectibleBlossom)Instantiate(blossomPrefab, transform.position, transform.rotation);
         blossomClone.transform.SetParent(blossomParent.transform);
         blossomClone.transform.localPosition = new Vector3(Random.Range(xMinPos, xMaxPos), yPos, 0f);
         blossomClone.transform.localScale = new Vector3(blossomSize, blossomSize, 0);
         blossomClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, Random.Range(-6, -2));
+
+        if (blossomSpriteIndex == 0)
+        {
+            blossomClone.GetComponent<SpriteRenderer>().sprite = blossomSprites[0];
+        }
+
+        if (blossomSpriteIndex == 1)
+        {
+            blossomClone.GetComponent<SpriteRenderer>().sprite = blossomSprites[1];
+        }
     }
 }

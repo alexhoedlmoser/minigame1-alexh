@@ -34,11 +34,11 @@ public class RaindropSpawner : MonoBehaviour
         while (spawn)
         {
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
-            CloneBlossom();
+            CloneRaindrop();
         }
     }
 
-    private void CloneBlossom()
+    private void CloneRaindrop()
     {
         float raindropSize = Random.Range(raindropMinSize, raindropMaxSize);
 

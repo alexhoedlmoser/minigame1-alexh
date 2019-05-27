@@ -524,6 +524,9 @@ MonoBehaviour:
   blossomPrefab: {fileID: 114221421410688322, guid: 01fa0eb63b2848b488fa35918d1ce5bb,
     type: 2}
   blossomParent: {fileID: 1876911028}
+  blossomSprites:
+  - {fileID: 21300000, guid: 9a107edd0218c194ab14c111f61673e5, type: 3}
+  - {fileID: 21300000, guid: 62d68a68feaea714d8bdd9a105b3284c, type: 3}
   minSpawnDelay: 1
   maxSpawnDelay: 3
   xMinPos: -6
