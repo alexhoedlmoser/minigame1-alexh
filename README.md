@@ -1,7 +1,7 @@
 # minigame1-alexh
 
-**Working Title:** Catch The Blossom
-**Progress:** 5%
+* **Working Title:** Catch The Blossom
+* **Progress:** 20%
 
 ### Development Platform
   * OS: Windows 10 Version 1803
@@ -34,5 +34,7 @@
 
 ### Lessons learned
 - How to start concepting a game
+- Working with Unity 2D Colliders and Rigidbodies
+- Working with Unity Inputs (Horizontal Axis)
 
 ##### © Copyright by Alexander Hödlmoser
