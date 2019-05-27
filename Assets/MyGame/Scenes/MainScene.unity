@@ -493,6 +493,78 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224156942762754894, guid: efdd763f553c26c47b65a9e11ab33185,
     type: 2}
   m_PrefabInternal: {fileID: 428166120}
+--- !u!1 &444226116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 444226118}
+  - component: {fileID: 444226117}
+  - component: {fileID: 444226119}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &444226117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444226116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3212b154ee6db34bb09d67dff4b6b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blossomPrefab: {fileID: 114221421410688322, guid: 01fa0eb63b2848b488fa35918d1ce5bb,
+    type: 2}
+  blossomParent: {fileID: 1876911028}
+  minSpawnDelay: 1
+  maxSpawnDelay: 3
+  xMinPos: -6
+  xMaxPos: 6
+  yPos: 0
+  blossomMinSize: 0.2
+  blossomMaxSize: 0.3
+--- !u!4 &444226118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444226116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &444226119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444226116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5600cb7939cde8a41a1f3e3babcf2e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raindropPrefab: {fileID: 114043181269429096, guid: 6ebaeaca0c04f44468d3e8a91eb17a1b,
+    type: 2}
+  raindropParent: {fileID: 1090951953}
+  minSpawnDelay: 3
+  maxSpawnDelay: 8
+  xMinPos: -6
+  xMaxPos: 6
+  yPos: 0
+  raindropMinSize: 0.2
+  raindropMaxSize: 0.3
 --- !u!1001 &458204336
 Prefab:
   m_ObjectHideFlags: 0
@@ -875,15 +947,44 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4169165648536046, guid: 6ebaeaca0c04f44468d3e8a91eb17a1b, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: scoreGui
+    - target: {fileID: 114043181269429096, guid: 6ebaeaca0c04f44468d3e8a91eb17a1b,
+        type: 2}
+      propertyPath: livesGui
       value: 
-      objectReference: {fileID: 520109098}
+      objectReference: {fileID: 1722596692}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ebaeaca0c04f44468d3e8a91eb17a1b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1090951953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090951954}
+  m_Layer: 0
+  m_Name: RaindropParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1090951954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1090951953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1157996694 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114535738318917706, guid: 0cf8c34af9cb46f4bbb4c08f3555c379,
@@ -1025,7 +1126,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1107,4 +1208,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1722596692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114953890012132428, guid: 7106a38561d519c45b1d4e4a6fc8fe05,
+    type: 2}
+  m_PrefabInternal: {fileID: 458204336}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+--- !u!1 &1876911028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1876911029}
+  m_Layer: 0
+  m_Name: BlossomParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1876911029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876911028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
