@@ -1,7 +1,7 @@
 # minigame1-alexh
 
 * **Working Title:** Catch The Blossom
-* **Progress:** 20%
+* **Progress:** 45%
 
 ### Development Platform
   * OS: Windows 10 Version 1803
@@ -9,6 +9,9 @@
   * Visual Studio: Version 15.9.10
   * Scripting Runtime Version: .NET 3.5 Equivalent
   * API Compatibility Level: .NET 2.0 Subset
+
+### Target Platform
+  * WebGL
 
 ### Description 
 
@@ -31,10 +34,13 @@
 <img src="./Screenshots/ConceptSketch3.jpg" width="300">
 </div>
 
-
 ### Lessons learned
 - How to start concepting a game
 - Working with Unity 2D Colliders and Rigidbodies
 - Working with Unity Inputs (Horizontal Axis)
+- Working with Scriptable Objects in Unity
+
+### Third Party Material
+- PersistableSO.cs Script by Neil North (northy179 on github.com)
 
 ##### © Copyright by Alexander Hödlmoser
