@@ -5,14 +5,6 @@ using TMPro;
 
 public class CollectibleRaindrop : MonoBehaviour
 {
-    private int lives = 3;
-    public TextMeshProUGUI livesGui;
-
-    void Start()
-    {
-        lives = 3;
-        livesGui.text = lives.ToString();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,9 +12,7 @@ public class CollectibleRaindrop : MonoBehaviour
 
         if (collision.gameObject.name == "PlayerBee")
         {
-            lives -= 1;
-            Debug.Log("lives: " + lives);
-            livesGui.text = lives.ToString();
+            HealthManager.healthValue -= 1;
             Destroy(gameObject, 0f);
         }
         else if (collision.gameObject.name == "BottomHitbox")
@@ -33,7 +23,7 @@ public class CollectibleRaindrop : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("CollisionEvent");
+        Debug.Log("CollisionEvent" + collision.gameObject.name);
     }
 
 }

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 224910222528143428}
   - component: {fileID: 222606183453842424}
   - component: {fileID: 114286671911929864}
+  - component: {fileID: 114403648974565854}
   m_Layer: 5
   m_Name: ScoreGUI
   m_TagString: Untagged
@@ -47,7 +48,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Score: 100'
+  m_text: 'Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f7a734ce5291ec47bd991b58c0f959c, type: 2}
   m_sharedMaterial: {fileID: 21056649029718474, guid: 4f7a734ce5291ec47bd991b58c0f959c,
@@ -124,11 +125,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -142,6 +143,17 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114403648974565854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1927114486751572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0221c98d562534ebe68ec2bf2b5dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222606183453842424
 CanvasRenderer:
   m_ObjectHideFlags: 1

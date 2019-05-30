@@ -5,13 +5,6 @@ using TMPro;
 
 public class CollectibleBlossom : MonoBehaviour
 {
-    private int score = 0;
-    public TextMeshProUGUI scoreGui;
-
-    void Start()
-    {
-        scoreGui.text = score.ToString();
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,23 +12,19 @@ public class CollectibleBlossom : MonoBehaviour
 
         if (collision.gameObject.name == "PlayerBee")
         {
-            score += 1;
-            Debug.Log("score: " + score);
-            scoreGui.text = score.ToString();
             Destroy(gameObject, 0f);
+            ScoreManager.scoreValue += 1;
         }
         else if (collision.gameObject.name == "BottomHitbox")
         {
-            score -= 1;
-            Debug.Log("score: " + score);
-            scoreGui.text = score.ToString();
             Destroy(gameObject, 1f);
+            ScoreManager.scoreValue -= 1;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("CollisionEvent");
+        Debug.Log("CollisionEvent" + collision.gameObject.name);
     }
 
 }
