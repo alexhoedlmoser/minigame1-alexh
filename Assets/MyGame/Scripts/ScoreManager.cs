@@ -5,15 +5,15 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static int scoreValue;        
-    private TextMeshProUGUI scoreGui;                     
+    public static int scoreValue;
+    private TextMeshProUGUI scoreGui;
 
     void Awake()
     {
         // Set up the reference.
         scoreGui = GetComponent<TextMeshProUGUI>();
 
-        // Reset the score.
+        // Reset score.
         scoreValue = 0;
     }
 

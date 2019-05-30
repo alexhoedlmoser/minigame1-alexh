@@ -12,13 +12,13 @@ public class CollectibleBlossom : MonoBehaviour
 
         if (collision.gameObject.name == "PlayerBee")
         {
-            Destroy(gameObject, 0f);
             ScoreManager.scoreValue += 1;
+            Destroy(gameObject, 0f);
         }
         else if (collision.gameObject.name == "BottomHitbox")
         {
-            Destroy(gameObject, 1f);
             ScoreManager.scoreValue -= 1;
+            Destroy(gameObject, 1f);
         }
     }
 

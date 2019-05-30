@@ -7,7 +7,7 @@ public class HealthManager : MonoBehaviour
 {
     public static int healthValue;
     private TextMeshProUGUI healthGui;
-    private SceneLoader sceneLoader;
+    private GameManager gameManager;
 
     void Awake()
     {
@@ -17,7 +17,7 @@ public class HealthManager : MonoBehaviour
         // Reset health.
         healthValue = 5;
 
-        sceneLoader = GameObject.Find("SceneLoader").GetComponent<SceneLoader>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void Update()
@@ -27,7 +27,8 @@ public class HealthManager : MonoBehaviour
 
         if (healthValue == 0)
         {
-            sceneLoader.LoadEndScene();
+            gameManager.SaveScore();
+            gameManager.LoadScore();
         }
     }
 }
