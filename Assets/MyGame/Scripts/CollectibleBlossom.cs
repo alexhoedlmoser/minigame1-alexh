@@ -5,7 +5,6 @@ using TMPro;
 
 public class CollectibleBlossom : MonoBehaviour
 {
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Triggerevent" + collision.gameObject.name);
@@ -15,10 +14,14 @@ public class CollectibleBlossom : MonoBehaviour
             ScoreManager.scoreValue += 1;
             Destroy(gameObject, 0f);
         }
-        else if (collision.gameObject.name == "BottomHitbox")
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "BottomHitbox")
         {
             ScoreManager.scoreValue -= 1;
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0f);
         }
     }
 

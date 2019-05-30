@@ -15,7 +15,7 @@ public class HealthManager : MonoBehaviour
         healthGui = GetComponent<TextMeshProUGUI>();
 
         // Reset health.
-        healthValue = 5;
+        healthValue = 1;
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }

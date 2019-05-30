@@ -19,6 +19,12 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
+        
+        if (scoreValue < 0)
+        {
+            scoreValue = 0;
+        }
+
         // Set the displayed text to be the word "Score" followed by the score value.
         scoreGui.text = "Score: " + scoreValue;
     }
