@@ -50,15 +50,6 @@ public class BlossomSpawner : MonoBehaviour
         blossomClone.transform.localPosition = new Vector3(Random.Range(xMinPos, xMaxPos), yPos, 0f);
         blossomClone.transform.localScale = new Vector3(blossomSize, blossomSize, 0);
         blossomClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, Random.Range(-6, -2));
-
-        if (blossomSpriteIndex == 0)
-        {
-            blossomClone.GetComponent<SpriteRenderer>().sprite = blossomSprites[0];
-        }
-
-        if (blossomSpriteIndex == 1)
-        {
-            blossomClone.GetComponent<SpriteRenderer>().sprite = blossomSprites[1];
-        }
+        blossomClone.GetComponent<SpriteRenderer>().sprite = blossomSprites[blossomSpriteIndex];
     }
 }

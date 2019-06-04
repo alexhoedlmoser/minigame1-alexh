@@ -7,6 +7,26 @@ public class Player : MonoBehaviour
     private const string AXISHORIZONTAL = "Horizontal";
     private float moveSpeed = 3.0f;
 
+    private bool spriteSwap = true;
+    public Sprite[] beeSprites;
+
+    private void Start()
+    {
+        StartCoroutine(SpriteSwapper());
+    }
+
+    IEnumerator SpriteSwapper()
+    {
+        while (spriteSwap)
+        {
+            yield return new WaitForSeconds(0.2f);
+            gameObject.GetComponent<SpriteRenderer>().sprite = beeSprites[0];
+
+            yield return new WaitForSeconds(0.2f);
+            gameObject.GetComponent<SpriteRenderer>().sprite = beeSprites[1];
+        }
+    }
+
     private void Move()
     {
         var deltaX = Input.GetAxis(AXISHORIZONTAL) * Time.deltaTime * moveSpeed;
@@ -19,5 +39,5 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
         Move();
-	}
+    }
 }
