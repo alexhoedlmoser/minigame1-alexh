@@ -6,7 +6,6 @@ using System.IO;
 
 public class PersistableSO : MonoBehaviour
 {
-
     [Header("Meta")]
     public string persisterName;
     [Header("Scriptable Objects")]
@@ -22,7 +21,6 @@ public class PersistableSO : MonoBehaviour
                 FileStream file = File.Open(Application.persistentDataPath + string.Format("/{0}_{1}.pso", persisterName, i), FileMode.Open);
                 JsonUtility.FromJsonOverwrite((string)bf.Deserialize(file), objectsToPersist[i]);
                 file.Close();
-
             }
             else
             {
