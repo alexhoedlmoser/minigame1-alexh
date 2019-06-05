@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     private TextMeshProUGUI timerGui;
     public float startTime = 10;
     private float currTimeLeft;
-    private GameManager gameManager;
+    public GameManager gameManager;
 
     void Start()
     {

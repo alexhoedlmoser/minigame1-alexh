@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4928643245407438}
   - component: {fileID: 212554211231595852}
-  - component: {fileID: 61981665588599070}
   - component: {fileID: 50922037914915610}
   - component: {fileID: 114221421410688322}
+  - component: {fileID: 58402109775967162}
   m_Layer: 0
   m_Name: CollectibleBlossom
   m_TagString: Untagged
@@ -63,8 +63,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61981665588599070
-BoxCollider2D:
+--- !u!58 &58402109775967162
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,18 +76,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 5.12, y: 5.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 5.12}
-  m_EdgeRadius: 0
+  m_Radius: 2.25
 --- !u!114 &114221421410688322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c9413a3d7195f408dda7ac433b5ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreGui: {fileID: 114286671911929864, guid: 6b9821b226712344a8f75660e23e23c0, type: 2}
 --- !u!212 &212554211231595852
 SpriteRenderer:
   m_ObjectHideFlags: 1
