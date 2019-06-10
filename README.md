@@ -15,7 +15,7 @@
 
 ### Description 
 
-"Catch The Blossom" is about a bee that has to collect blossoms in order to pollinate them. You control the bee and have to catch the dropping blossoms to gain points that count towards the score. If a blossom falls to the ground without catching it, points will be subracted from the total score. But there are also raindrops falling from the sky, which you should strictly avoid. Otherwise the bee will lose one of its 3 lives. One round lasts for a maximum of 3 minutes, in which you have the chance to collect as many points as you can and aim for the highest score!
+"Catch The Blossom" is about a bee that has to collect blossoms in order to pollinate them. You control the bee and have to catch the dropping blossoms to gain points that count towards the score. If a blossom falls to the ground without catching it, points will be subracted from the total score. But there are also raindrops falling from the sky, which drain some health from the bee. Also be aware of the deadly poison that is dropping down. If you touch one of those drops the bee will instantly die, so strictly avoid them! One round lasts for a maximum of 3 minutes, in which you have the chance to collect as many points as you can to achieve a great highscore!
 
 ### Controls
 
