@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     private bool spriteSwap = true;
     public Sprite[] beeSprites;
+    public float boundaryLeft;
+    public float boundaryRight;
 
     private void Start()
     {
@@ -29,15 +31,14 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        var deltaX = Input.GetAxis(AXISHORIZONTAL) * Time.deltaTime * moveSpeed;
-        var newPosX = Mathf.Clamp(transform.position.x + deltaX, -300f, 300f);
+            var deltaX = Input.GetAxis(AXISHORIZONTAL) * Time.deltaTime * moveSpeed;
+            var newPosX = Mathf.Clamp(transform.position.x + deltaX, boundaryLeft, boundaryRight);
 
-        transform.position = new Vector2(newPosX, transform.position.y);
-
+            transform.position = new Vector2(newPosX, transform.position.y);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    void Update ()
+    {
         Move();
     }
 }

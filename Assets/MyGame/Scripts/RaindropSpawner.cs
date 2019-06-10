@@ -8,9 +8,6 @@ public class RaindropSpawner : MonoBehaviour
 
     public CollectibleRaindrop raindropPrefab;
     public GameObject raindropParent;
-    //public GameObject boundaryLeft;
-    //public GameObject boundaryRight;
-    //public GameObject boundaryTop;
 
     public float minSpawnDelay = 1.0f;
     public float maxSpawnDelay = 5.0f;
@@ -21,13 +18,6 @@ public class RaindropSpawner : MonoBehaviour
 
     public float raindropMinSize = 0.1f;
     public float raindropMaxSize = 0.5f;
-
-    /*private void Awake()
-    {
-        xMinPos = (int)boundaryLeft.transform.position.x;
-        xMaxPos = (int)boundaryRight.transform.position.x;
-        yPos = (int)boundaryTop.transform.position.y;
-    }*/
 
     IEnumerator Start()
     {

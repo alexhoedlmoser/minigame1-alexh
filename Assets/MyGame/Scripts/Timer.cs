@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public float startTime = 10;
     private float currTimeLeft;
     public GameManager gameManager;
+    public SceneLoader sceneLoader;
 
     void Start()
     {
@@ -30,10 +31,9 @@ public class Timer : MonoBehaviour
 
         if (currTimeLeft == 0)
         {
-          gameManager.LoadScore();
+            gameManager.SaveScore();
+            gameManager.LoadScore();
         }
-
-
     }
 
     public IEnumerator StartTimer()
@@ -46,5 +46,4 @@ public class Timer : MonoBehaviour
             currTimeLeft--;
         }
     }
-
 }

@@ -9,9 +9,6 @@ public class BlossomSpawner : MonoBehaviour
     public CollectibleBlossom blossomPrefab;
     public GameObject blossomParent;
     public Sprite[] blossomSprites;
-    //public GameObject boundaryLeft;
-    //public GameObject boundaryRight;
-    //public GameObject boundaryTop;
 
     public float minSpawnDelay = 1.0f;
     public float maxSpawnDelay = 5.0f;
@@ -22,13 +19,6 @@ public class BlossomSpawner : MonoBehaviour
 
     public float blossomMinSize = 0.1f;
     public float blossomMaxSize = 0.5f;
-
-    /*private void Awake()
-    {
-        xMinPos = (int)boundaryLeft.transform.position.x;
-        xMaxPos = (int)boundaryRight.transform.position.x;
-        yPos = (int)boundaryTop.transform.position.y;
-    }*/
 
     IEnumerator Start()
     {

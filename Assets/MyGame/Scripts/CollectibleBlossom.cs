@@ -5,7 +5,6 @@ using TMPro;
 
 public class CollectibleBlossom : MonoBehaviour
 {
-
     private string playerTag = "PlayerBee";
     private string bottomTag = "BottomHitbox";
 
@@ -28,10 +27,4 @@ public class CollectibleBlossom : MonoBehaviour
             Destroy(gameObject, 0f);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("CollisionEvent" + collision.gameObject.name);
-    }
-
 }
