@@ -15,6 +15,8 @@ public class RaindropSpawner : MonoBehaviour
     public int xMinPos;
     public int xMaxPos;
     public int yPos;
+    public int yMinSpeed;
+    public int yMaxSpeed;
 
     public float raindropMinSize = 0.1f;
     public float raindropMaxSize = 0.5f;
@@ -36,6 +38,6 @@ public class RaindropSpawner : MonoBehaviour
         raindropClone.transform.SetParent(raindropParent.transform);
         raindropClone.transform.localPosition = new Vector3(Random.Range(xMinPos, xMaxPos), yPos, 0f);
         raindropClone.transform.localScale = new Vector3(raindropSize, raindropSize, 0);
-        raindropClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, Random.Range(-6, -2));
+        raindropClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, Random.Range(yMaxSpeed, yMinSpeed));
     }
 }

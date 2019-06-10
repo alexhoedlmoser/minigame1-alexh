@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 342595473}
   - component: {fileID: 342595472}
   - component: {fileID: 342595471}
+  - component: {fileID: 342595475}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -335,6 +336,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 342595469}
   m_CullTransparentMesh: 0
+--- !u!114 &342595475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 342595469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 120, y: -120}
+  m_UseGraphicAlpha: 1
 --- !u!1 &399679013
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +363,7 @@ GameObject:
   - component: {fileID: 399679017}
   - component: {fileID: 399679016}
   - component: {fileID: 399679015}
+  - component: {fileID: 399679019}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -484,6 +500,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 399679013}
   m_CullTransparentMesh: 0
+--- !u!114 &399679019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 399679013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 120, y: -120}
+  m_UseGraphicAlpha: 1
 --- !u!1 &421028092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,6 +1719,7 @@ GameObject:
   - component: {fileID: 1797302450}
   - component: {fileID: 1797302449}
   - component: {fileID: 1797302448}
+  - component: {fileID: 1797302451}
   m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
@@ -1766,6 +1797,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1797302446}
   m_CullTransparentMesh: 0
+--- !u!114 &1797302451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797302446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 20, y: -100}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1924868117
 GameObject:
   m_ObjectHideFlags: 0

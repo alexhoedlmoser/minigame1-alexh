@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private const string AXISHORIZONTAL = "Horizontal";
-    private float moveSpeed = 3.0f;
+    public float moveSpeed = 3.0f;
 
     private bool spriteSwap = true;
     public Sprite[] beeSprites;

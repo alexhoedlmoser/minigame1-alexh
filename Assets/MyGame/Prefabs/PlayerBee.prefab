@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212839841195648738}
   - component: {fileID: 50138473781199772}
   - component: {fileID: 114194809117573816}
-  - component: {fileID: 61078965112910432}
-  - component: {fileID: 61798086344920700}
-  - component: {fileID: 61890893985797132}
+  - component: {fileID: 70490022073766716}
+  - component: {fileID: 70321293183666480}
+  - component: {fileID: 70705131306319568}
+  - component: {fileID: 95360887068803790}
   m_Layer: 0
   m_Name: PlayerBee
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1539092839985536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.6, z: -0}
+  m_LocalPosition: {x: 0, y: -3.4, z: -0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,8 +66,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61078965112910432
-BoxCollider2D:
+--- !u!70 &70321293183666480
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -77,21 +78,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.89}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.18, y: 6.53}
-  m_EdgeRadius: 0
---- !u!61 &61798086344920700
-BoxCollider2D:
+  m_Offset: {x: 0, y: 1.99}
+  m_Size: {x: 2.44, y: 3.58}
+  m_Direction: 0
+--- !u!70 &70490022073766716
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -102,21 +93,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.07}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.77, y: 3.8}
-  m_EdgeRadius: 0
---- !u!61 &61890893985797132
-BoxCollider2D:
+  m_Offset: {x: 0, y: -1.66}
+  m_Size: {x: 9.3, y: 3.33}
+  m_Direction: 1
+--- !u!70 &70705131306319568
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -127,19 +108,27 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.13}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.24, y: 10.24}
-    newSize: {x: 10.24, y: 10.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 10.24, y: 4.52}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -1.34}
+  m_Size: {x: 3.83, y: 5.96}
+  m_Direction: 0
+--- !u!95 &95360887068803790
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1539092839985536}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83bb7f830a6855940b359e00369abf53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114194809117573816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf75bb1c5923f64298fb6dcfc203402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 8
   beeSprites:
   - {fileID: 21300000, guid: 133b108888876cc4aabeda9c161a2745, type: 3}
   - {fileID: 21300000, guid: a6d5bb4fe592ad34f9fe4bd24a1d31a2, type: 3}
@@ -191,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 133b108888876cc4aabeda9c161a2745, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6d5bb4fe592ad34f9fe4bd24a1d31a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -16,6 +16,8 @@ public class BlossomSpawner : MonoBehaviour
     public int xMinPos;
     public int xMaxPos;
     public int yPos;
+    public int yMinSpeed;
+    public int yMaxSpeed;
 
     public float blossomMinSize = 0.1f;
     public float blossomMaxSize = 0.5f;
@@ -32,14 +34,14 @@ public class BlossomSpawner : MonoBehaviour
     private void CloneBlossom()
     {
         float blossomSize = Random.Range(blossomMinSize, blossomMaxSize);
-        int blossomSpriteIndex = Random.Range(0, 2);
+        int blossomSpriteIndex = Random.Range(0, 5);
         Debug.Log("Index: " + blossomSpriteIndex);
 
         CollectibleBlossom blossomClone = (CollectibleBlossom)Instantiate(blossomPrefab, transform.position, transform.rotation);
         blossomClone.transform.SetParent(blossomParent.transform);
         blossomClone.transform.localPosition = new Vector3(Random.Range(xMinPos, xMaxPos), yPos, 0f);
         blossomClone.transform.localScale = new Vector3(blossomSize, blossomSize, 0);
-        blossomClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, Random.Range(-6, -2));
+        blossomClone.GetComponent<Rigidbody2D>().velocity = new Vector2(0, Random.Range(yMaxSpeed, yMinSpeed));
         blossomClone.GetComponent<SpriteRenderer>().sprite = blossomSprites[blossomSpriteIndex];
     }
 }

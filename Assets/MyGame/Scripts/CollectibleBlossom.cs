@@ -7,6 +7,7 @@ public class CollectibleBlossom : MonoBehaviour
 {
     private string playerTag = "PlayerBee";
     private string bottomTag = "BottomHitbox";
+    private Animator playerAnimator;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,8 +15,10 @@ public class CollectibleBlossom : MonoBehaviour
 
         if (collision.gameObject.name == playerTag)
         {
-            ScoreManager.scoreValue += 10;
+            ScoreManager.scoreValue += Random.Range(8, 13);
             Destroy(gameObject, 0f);
+            playerAnimator = GameObject.Find(playerTag).GetComponent<Animator>();
+            playerAnimator.Play("BeeGood");
         }
     }
 
@@ -23,7 +26,7 @@ public class CollectibleBlossom : MonoBehaviour
     {
         if (collision.gameObject.name == bottomTag)
         {
-            ScoreManager.scoreValue -= 10;
+            ScoreManager.scoreValue -= Random.Range(9, 12); ;
             Destroy(gameObject, 0f);
         }
     }
