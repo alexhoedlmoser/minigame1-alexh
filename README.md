@@ -1,7 +1,7 @@
 # minigame1-alexh
 
 * **Working Title:** Catch The Blossom
-* **Progress:** 45%
+* **Progress:** 80% as of June 10 2019
 
 ### Development Platform
   * OS: Windows 10 Version 1803
@@ -15,7 +15,7 @@
 
 ### Description 
 
-"Catch The Blossom" is about a bee that has to collect blossoms in order to pollinate them. You control the bee and have to catch the dropping blossoms to gain points that count towards the score. If a blossom falls to the ground without catching it, a point will be subracted from the total score. But there are also raindrops falling from the sky, which you should strictly avoid. Otherwise the bee will lose one of its 3 lives. One round lasts for a maximum of 3 minutes, in which you have the chance to collect as many points as you can and aim for the highest score!
+"Catch The Blossom" is about a bee that has to collect blossoms in order to pollinate them. You control the bee and have to catch the dropping blossoms to gain points that count towards the score. If a blossom falls to the ground without catching it, points will be subracted from the total score. But there are also raindrops falling from the sky, which you should strictly avoid. Otherwise the bee will lose one of its 3 lives. One round lasts for a maximum of 3 minutes, in which you have the chance to collect as many points as you can and aim for the highest score!
 
 ### Controls
 
@@ -41,6 +41,7 @@
 - Working with Scriptable Objects in Unity
 
 ### Third Party Material
-- PersistableSO.cs Script by Neil North (northy179 on github.com)
+- PersistableSO.cs Script by [Neil North](https://github.com/northy179)
+- Sunflower, Poppy, Daisy, Hydrangea, Wallflower, Skull and Drop Icons made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/)
 
 ##### © Copyright by Alexander Hödlmoser

@@ -547,7 +547,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dfdc7e4f093322f47aa23a84171588e2, type: 3}
   - {fileID: 21300000, guid: 3c563443e426c694597f78c0287949e7, type: 3}
   minSpawnDelay: 1
-  maxSpawnDelay: 4
+  maxSpawnDelay: 3
   xMinPos: -6
   xMaxPos: 6
   yPos: 0
