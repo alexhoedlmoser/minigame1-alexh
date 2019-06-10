@@ -144,8 +144,8 @@ MonoBehaviour:
   beeSprites:
   - {fileID: 21300000, guid: 133b108888876cc4aabeda9c161a2745, type: 3}
   - {fileID: 21300000, guid: a6d5bb4fe592ad34f9fe4bd24a1d31a2, type: 3}
-  boundaryLeft: -5.4
-  boundaryRight: 5.4
+  boundaryLeft: -5.38
+  boundaryRight: -5.38
 --- !u!212 &212839841195648738
 SpriteRenderer:
   m_ObjectHideFlags: 1

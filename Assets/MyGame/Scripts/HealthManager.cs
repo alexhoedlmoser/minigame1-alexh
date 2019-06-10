@@ -22,6 +22,11 @@ public class HealthManager : MonoBehaviour
 
     void Update()
     {
+        if (healthValue < 0)
+        {
+            healthValue = 0;
+        }
+
         // Set the displayed text to be the word "Health" followed by the health value.
         healthGui.text = "Lives: " + healthValue;
 

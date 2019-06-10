@@ -465,6 +465,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114194809117573816, guid: 76463e95e5e1c674d85f0b2ea725ad6a,
+        type: 2}
+      propertyPath: boundaryRight
+      value: 5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 70490022073766716, guid: 76463e95e5e1c674d85f0b2ea725ad6a,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 10.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 70490022073766716, guid: 76463e95e5e1c674d85f0b2ea725ad6a,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 3.24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76463e95e5e1c674d85f0b2ea725ad6a, type: 2}
   m_IsPrefabAsset: 0
@@ -486,7 +501,7 @@ RectTransform:
   - {fileID: 317547241}
   - {fileID: 50980725}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -503,6 +518,7 @@ GameObject:
   - component: {fileID: 444226118}
   - component: {fileID: 444226117}
   - component: {fileID: 444226119}
+  - component: {fileID: 444226120}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -531,12 +547,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dfdc7e4f093322f47aa23a84171588e2, type: 3}
   - {fileID: 21300000, guid: 3c563443e426c694597f78c0287949e7, type: 3}
   minSpawnDelay: 1
-  maxSpawnDelay: 3
+  maxSpawnDelay: 4
   xMinPos: -6
   xMaxPos: 6
   yPos: 0
-  yMinSpeed: -4
-  yMaxSpeed: -8
+  yMinSpeed: -2
+  yMaxSpeed: -7
   blossomMinSize: 0.2
   blossomMaxSize: 0.3
 --- !u!4 &444226118
@@ -550,7 +566,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &444226119
 MonoBehaviour:
@@ -567,14 +583,37 @@ MonoBehaviour:
     type: 2}
   raindropParent: {fileID: 1090951953}
   minSpawnDelay: 1
-  maxSpawnDelay: 3
+  maxSpawnDelay: 4
   xMinPos: -6
   xMaxPos: 6
   yPos: 0
   yMinSpeed: -4
-  yMaxSpeed: -8
+  yMaxSpeed: -9
   raindropMinSize: 0.2
   raindropMaxSize: 0.3
+--- !u!114 &444226120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 444226116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa24819c887b924fbbe24c8188f5e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathdropPrefab: {fileID: 114355730491078700, guid: d41e3e7073264d343b2f2ca6eca4a3d0,
+    type: 2}
+  deathdropParent: {fileID: 1856532122}
+  minSpawnDelay: 5
+  maxSpawnDelay: 9
+  xMinPos: -6
+  xMaxPos: 6
+  yPos: 0
+  yMinSpeed: -5
+  yMaxSpeed: -10
+  deathdropMinSize: 0.2
+  deathdropMaxSize: 0.3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,6 +923,48 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 0, y: -10}
   m_UseGraphicAlpha: 1
+--- !u!1001 &866154437
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4102930006797650, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102930006797650, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102930006797650, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102930006797650, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102930006797650, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102930006797650, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102930006797650, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102930006797650, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d41e3e7073264d343b2f2ca6eca4a3d0, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1026692698
 Prefab:
   m_ObjectHideFlags: 0
@@ -922,18 +1003,6 @@ Prefab:
     - target: {fileID: 4928643245407438, guid: 01fa0eb63b2848b488fa35918d1ce5bb, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928643245407438, guid: 01fa0eb63b2848b488fa35918d1ce5bb, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928643245407438, guid: 01fa0eb63b2848b488fa35918d1ce5bb, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4928643245407438, guid: 01fa0eb63b2848b488fa35918d1ce5bb, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01fa0eb63b2848b488fa35918d1ce5bb, type: 2}
@@ -977,8 +1046,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 58107955269674494, guid: 6ebaeaca0c04f44468d3e8a91eb17a1b, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ebaeaca0c04f44468d3e8a91eb17a1b, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1090951953
@@ -990,7 +1058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1090951954}
   m_Layer: 0
-  m_Name: RaindropParent
+  m_Name: RaindropContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1110,7 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1248,44 +1316,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224520212521023788, guid: 7106a38561d519c45b1d4e4a6fc8fe05,
     type: 2}
   m_PrefabInternal: {fileID: 1325292917}
---- !u!1 &1405377855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1174698704144906, guid: 6ebaeaca0c04f44468d3e8a91eb17a1b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1047659545}
---- !u!70 &1405377856
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1405377855}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 4.14, y: 5.05}
-  m_Direction: 0
---- !u!95 &1405377857
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1405377855}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e6ef4e2ae02cb4e459d70c553c1c83b6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1710177987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1378,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1856532122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856532123}
+  m_Layer: 0
+  m_Name: DeathdropContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1856532123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1856532122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1876911028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876911029}
   m_Layer: 0
-  m_Name: BlossomParent
+  m_Name: BlossomContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
