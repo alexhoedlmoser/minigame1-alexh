@@ -40,7 +40,7 @@
 </div>
 <div>
 <img src="./Screenshots/FinalScreen3.jpg" width="512">
-</div
+</div>
 
 ### Concept Phase
 
