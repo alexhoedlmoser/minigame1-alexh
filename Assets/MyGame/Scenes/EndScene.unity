@@ -600,7 +600,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1024, y: 768}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -732,6 +732,16 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114234637137565064, guid: c3a9828876de3c34ca65bcaffd990678,
+        type: 2}
+      propertyPath: m_text
+      value: 'Your Highscore: 489'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114234637137565064, guid: c3a9828876de3c34ca65bcaffd990678,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a9828876de3c34ca65bcaffd990678, type: 2}
@@ -1264,6 +1274,16 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925230115128734, guid: e6f87791e8ad9ac4780b9b95b8412743,
+        type: 2}
+      propertyPath: m_text
+      value: 'Your Score: 376'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114925230115128734, guid: e6f87791e8ad9ac4780b9b95b8412743,
+        type: 2}
+      propertyPath: m_textInfo.characterCount
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6f87791e8ad9ac4780b9b95b8412743, type: 2}
