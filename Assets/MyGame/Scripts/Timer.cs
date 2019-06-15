@@ -13,10 +13,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        // find GameManager Object
         scoreManager = GameObject.Find(scoreManagerName).GetComponent<ScoreManager>();
-
-        // Set up the reference.
         timerGui = GetComponent<TextMeshProUGUI>();
 
         StartCoroutine(StartTimer());

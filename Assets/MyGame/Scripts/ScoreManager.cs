@@ -43,8 +43,6 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    
-
     public void SaveScore()
     {
         scoreData.value = scoreValue;

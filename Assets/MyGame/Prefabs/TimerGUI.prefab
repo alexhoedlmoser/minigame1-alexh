@@ -154,11 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd756b7223e6c49428832ebbcf5a11cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 60
-  gameManager: {fileID: 114296713441413572, guid: 46a98d19b2e59fd43ac44bd08856266f,
-    type: 2}
-  sceneLoader: {fileID: 114535738318917706, guid: 0cf8c34af9cb46f4bbb4c08f3555c379,
-    type: 2}
+  startTime: 120
 --- !u!222 &222445642911270914
 CanvasRenderer:
   m_ObjectHideFlags: 1

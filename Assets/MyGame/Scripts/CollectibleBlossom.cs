@@ -31,4 +31,9 @@ public class CollectibleBlossom : MonoBehaviour
             Destroy(gameObject, 0f);
         }
     }
+
+    private void Update()
+    {
+        transform.Rotate(Vector3.back * (100 * Time.deltaTime));
+    }
 }

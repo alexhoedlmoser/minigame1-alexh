@@ -32,5 +32,4 @@ public class CollectibleDeathdrop : MonoBehaviour
     {
         Debug.Log("CollisionEvent" + collision.gameObject.name);
     }
-
 }

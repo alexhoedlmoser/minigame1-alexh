@@ -6,45 +6,47 @@ using TMPro;
 public class HealthManager : MonoBehaviour
 {
     public static int healthValue;
-    private TextMeshProUGUI healthGui;
     private ScoreManager scoreManager;
     private string scoreManagerName = "ScoreManager";
+    private string heartGoneAnimationStateName = "HeartGone";
 
-    private GameObject heart1;
+    private Animator heart1;
     private string heart1Name = "Heart1";
-    private GameObject heart2;
+    private Animator heart2;
     private string heart2Name = "Heart2";
-    private GameObject heart3;
+    private Animator heart3;
     private string heart3Name = "Heart3";
+    private bool callOnceHeart1 = false;
+    private bool callOnceHeart2 = false;
+    private bool callOnceHeart3 = false;
 
     void Awake()
     {
-        healthGui = GetComponent<TextMeshProUGUI>();
         healthValue = 3;
         scoreManager = GameObject.Find(scoreManagerName).GetComponent<ScoreManager>();
-        heart1 = GameObject.Find(heart1Name);
-        heart2 = GameObject.Find(heart2Name);
-        heart3 = GameObject.Find(heart3Name);
+        heart1 = GameObject.Find(heart1Name).GetComponent<Animator>();
+        heart2 = GameObject.Find(heart2Name).GetComponent<Animator>();
+        heart3 = GameObject.Find(heart3Name).GetComponent<Animator>();
     }
 
     void Update()
     {
-        if(healthValue < 3)
+        if(healthValue < 3 & !callOnceHeart3)
         {
-            heart3.SetActive(false);
+            StartCoroutine(DisableHeart3());
+            callOnceHeart3 = true;
         }
 
-        if (healthValue < 2)
+        if (healthValue < 2 & !callOnceHeart2)
         {
-            heart2.SetActive(false);
-            heart3.SetActive(false);
+            StartCoroutine(DisableHeart2());
+            callOnceHeart2 = true;
         }
 
-        if (healthValue < 1)
+        if (healthValue < 1 & !callOnceHeart1)
         {
-            heart1.SetActive(false);
-            heart2.SetActive(false);
-            heart3.SetActive(false);
+            StartCoroutine(DisableHeart1());
+            callOnceHeart1 = true;
         }
 
         if (healthValue < 0)
@@ -59,5 +61,29 @@ public class HealthManager : MonoBehaviour
             scoreManager.SaveScore();
             scoreManager.LoadScore();
         }
+    }
+
+    IEnumerator DisableHeart3()
+    {
+        heart3.Play(heartGoneAnimationStateName);
+        yield return new WaitForSeconds(0.5f);
+        GameObject heart3Obj = GameObject.Find(heart3Name);
+        heart3Obj.SetActive(false);
+    }
+
+    IEnumerator DisableHeart2()
+    {
+        heart2.Play(heartGoneAnimationStateName);
+        yield return new WaitForSeconds(0.5f);
+        GameObject heart2Obj = GameObject.Find(heart2Name);
+        heart2Obj.SetActive(false);
+    }
+
+    IEnumerator DisableHeart1()
+    {
+        heart1.Play(heartGoneAnimationStateName);
+        yield return new WaitForSeconds(0.5f);
+        GameObject heart1Obj = GameObject.Find(heart1Name);
+        heart1Obj.SetActive(false);
     }
 }

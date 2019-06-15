@@ -52,7 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: deb1c83ce0607e042ad09c4aac79cd3c, type: 2}
-  scoreGui: {fileID: 114286671911929864, guid: 6b9821b226712344a8f75660e23e23c0, type: 2}
   scoreGuiEnd: {fileID: 114925230115128734, guid: e6f87791e8ad9ac4780b9b95b8412743,
     type: 2}
   highscoreGuiEnd: {fileID: 114234637137565064, guid: c3a9828876de3c34ca65bcaffd990678,

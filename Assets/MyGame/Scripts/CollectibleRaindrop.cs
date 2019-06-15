@@ -31,5 +31,4 @@ public class CollectibleRaindrop : MonoBehaviour
     {
         Debug.Log("CollisionEvent" + collision.gameObject.name);
     }
-
 }
