@@ -8,6 +8,7 @@ public class HealthManager : MonoBehaviour
     public static int healthValue;
     private TextMeshProUGUI healthGui;
     private GameManager gameManager;
+    private string gameManagerName;
 
     void Awake()
     {
@@ -17,7 +18,7 @@ public class HealthManager : MonoBehaviour
         // Reset health.
         healthValue = 3;
 
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.Find(gameManagerName).GetComponent<GameManager>();
     }
 
     void Update()
@@ -33,7 +34,7 @@ public class HealthManager : MonoBehaviour
         if (healthValue == 0)
         {
             gameManager.SaveScore();
-            gameManager.LoadScore();
+            gameManager.LoadEnd();
         }
     }
 }

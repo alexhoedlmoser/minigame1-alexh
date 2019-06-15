@@ -19,7 +19,6 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
-        
         if (scoreValue < 0)
         {
             scoreValue = 0;

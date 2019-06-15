@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     public GameManager gameManager;
     public SceneLoader sceneLoader;
 
+
     void Start()
     {
         // find GameManager Object
@@ -32,7 +33,7 @@ public class Timer : MonoBehaviour
         if (currTimeLeft == 0)
         {
             gameManager.SaveScore();
-            gameManager.LoadScore();
+            gameManager.LoadEnd();
         }
     }
 

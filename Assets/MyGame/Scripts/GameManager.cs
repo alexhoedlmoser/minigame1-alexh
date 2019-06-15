@@ -5,7 +5,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-
     public SceneLoader sceneLoader;
     public ScoreData scoreData;
     public TextMeshProUGUI scoreGuiEnd;
@@ -21,7 +20,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadScore()
+    public void LoadEnd()
     {
         scoreGuiEnd.text = "Your Score: " + scoreData.value.ToString();
         highscoreGuiEnd.text = "Your Highscore: " + scoreData.highestValue.ToString();
