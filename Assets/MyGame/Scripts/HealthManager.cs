@@ -7,18 +7,14 @@ public class HealthManager : MonoBehaviour
 {
     public static int healthValue;
     private TextMeshProUGUI healthGui;
-    private GameManager gameManager;
-    private string gameManagerName;
+    private ScoreManager scoreManager;
+    private string scoreManagerName = "ScoreManager";
 
     void Awake()
     {
-        // Set up the reference.
         healthGui = GetComponent<TextMeshProUGUI>();
-
-        // Reset health.
         healthValue = 3;
-
-        gameManager = GameObject.Find(gameManagerName).GetComponent<GameManager>();
+        scoreManager = GameObject.Find(scoreManagerName).GetComponent<ScoreManager>();
     }
 
     void Update()
@@ -28,13 +24,12 @@ public class HealthManager : MonoBehaviour
             healthValue = 0;
         }
 
-        // Set the displayed text to be the word "Health" followed by the health value.
         healthGui.text = "Lives: " + healthValue;
 
         if (healthValue == 0)
         {
-            gameManager.SaveScore();
-            gameManager.LoadEnd();
+            scoreManager.SaveScore();
+            scoreManager.LoadScore();
         }
     }
 }

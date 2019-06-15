@@ -5,12 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private const string AXISHORIZONTAL = "Horizontal";
-    public float moveSpeed = 3.0f;
+    [SerializeField] float moveSpeed = 3.0f;
 
     private bool spriteSwap = true;
-    public Sprite[] beeSprites;
-    public float boundaryLeft;
-    public float boundaryRight;
+    [SerializeField] Sprite[] beeSprites;
+    [SerializeField] float boundaryLeft;
+    [SerializeField] float boundaryRight;
 
     private void Start()
     {

@@ -6,20 +6,20 @@ public class DeathdropSpawner : MonoBehaviour
 {
     private bool spawn = true;
 
-    public CollectibleDeathdrop deathdropPrefab;
-    public GameObject deathdropParent;
+    [SerializeField] CollectibleDeathdrop deathdropPrefab;
+    [SerializeField] GameObject deathdropParent;
 
-    public float minSpawnDelay = 1.0f;
-    public float maxSpawnDelay = 5.0f;
+    [SerializeField] float minSpawnDelay = 1.0f;
+    [SerializeField] float maxSpawnDelay = 5.0f;
 
-    public int xMinPos;
-    public int xMaxPos;
-    public int yPos;
-    public int yMinSpeed;
-    public int yMaxSpeed;
+    [SerializeField] int xMinPos;
+    [SerializeField] int xMaxPos;
+    [SerializeField] int yPos;
+    [SerializeField] int yMinSpeed;
+    [SerializeField] int yMaxSpeed;
 
-    public float deathdropMinSize = 0.1f;
-    public float deathdropMaxSize = 0.5f;
+    [SerializeField] float deathdropMinSize = 0.1f;
+    [SerializeField] float deathdropMaxSize = 0.5f;
 
     IEnumerator Start()
     {

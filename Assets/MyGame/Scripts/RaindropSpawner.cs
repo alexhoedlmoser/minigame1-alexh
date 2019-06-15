@@ -6,20 +6,20 @@ public class RaindropSpawner : MonoBehaviour
 {
     private bool spawn = true;
 
-    public CollectibleRaindrop raindropPrefab;
-    public GameObject raindropParent;
+    [SerializeField] CollectibleRaindrop raindropPrefab;
+    [SerializeField] GameObject raindropParent;
 
-    public float minSpawnDelay = 1.0f;
-    public float maxSpawnDelay = 5.0f;
+    [SerializeField] float minSpawnDelay = 1.0f;
+    [SerializeField] float maxSpawnDelay = 5.0f;
 
-    public int xMinPos;
-    public int xMaxPos;
-    public int yPos;
-    public int yMinSpeed;
-    public int yMaxSpeed;
+    [SerializeField] int xMinPos;
+    [SerializeField] int xMaxPos;
+    [SerializeField] int yPos;
+    [SerializeField] int yMinSpeed;
+    [SerializeField] int yMaxSpeed;
 
-    public float raindropMinSize = 0.1f;
-    public float raindropMaxSize = 0.5f;
+    [SerializeField] float raindropMinSize = 0.1f;
+    [SerializeField] float raindropMaxSize = 0.5f;
 
     IEnumerator Start()
     {

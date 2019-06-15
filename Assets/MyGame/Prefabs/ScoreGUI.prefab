@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 224910222528143428}
   - component: {fileID: 222606183453842424}
   - component: {fileID: 114286671911929864}
-  - component: {fileID: 114075890578825700}
   m_Layer: 5
   m_Name: ScoreGUI
   m_TagString: Untagged
@@ -29,17 +28,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114075890578825700
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1927114486751572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc0221c98d562534ebe68ec2bf2b5dcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114286671911929864
 MonoBehaviour:
   m_ObjectHideFlags: 1

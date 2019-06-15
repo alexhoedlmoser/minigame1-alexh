@@ -6,34 +6,28 @@ using TMPro;
 public class Timer : MonoBehaviour
 { 
     private TextMeshProUGUI timerGui;
-    public float startTime = 10;
+    [SerializeField] float startTime = 10;
     private float currTimeLeft;
-    public GameManager gameManager;
-    public SceneLoader sceneLoader;
-
+    private ScoreManager scoreManager;
+    private string scoreManagerName = "ScoreManager";
 
     void Start()
     {
         // find GameManager Object
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        scoreManager = GameObject.Find(scoreManagerName).GetComponent<ScoreManager>();
 
         // Set up the reference.
         timerGui = GetComponent<TextMeshProUGUI>();
 
         StartCoroutine(StartTimer());
-
-        // Reset timer.
-        //timeLeft = 180;
     }
 
     void Update()
     {
-        //timeLeft -= Time.deltaTime;
-
         if (currTimeLeft == 0)
         {
-            gameManager.SaveScore();
-            gameManager.LoadEnd();
+            scoreManager.SaveScore();
+            scoreManager.LoadScore();
         }
     }
 

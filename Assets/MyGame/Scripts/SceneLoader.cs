@@ -7,19 +7,19 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadIntroScene()
     {
-        SceneManager.LoadScene("IntroScene");
+        SceneManager.LoadScene(0);
         Cursor.visible = true;
     }
 
     public void LoadMainScene()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(1);
         Cursor.visible = false;
     }
 
     public void LoadEndScene()
     {
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene(2);
         Cursor.visible = true;
     }
 
