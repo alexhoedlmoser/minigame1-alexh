@@ -8,6 +8,13 @@ public class CollectibleRaindrop : MonoBehaviour
     private string playerTag = "PlayerBee";
     private string bottomTag = "BottomHitbox";
     private Animator playerAnimator;
+    private HealthManager healthManager;
+    private string healthManagerName = "HealthManager";
+
+    private void Start()
+    {
+        healthManager = GameObject.Find(healthManagerName).GetComponent<HealthManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +22,7 @@ public class CollectibleRaindrop : MonoBehaviour
 
         if (collision.gameObject.name == playerTag)
         {
-            HealthManager.healthValue -= 1;
+            healthManager.healthValue -= 1;
             Destroy(gameObject, 0f);
             playerAnimator = GameObject.Find(playerTag).GetComponent<Animator>();
             playerAnimator.Play("BeeBad");

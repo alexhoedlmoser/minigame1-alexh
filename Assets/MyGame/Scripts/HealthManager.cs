@@ -5,7 +5,7 @@ using TMPro;
 
 public class HealthManager : MonoBehaviour
 {
-    public static int healthValue;
+    public int healthValue;
     private ScoreManager scoreManager;
     private string scoreManagerName = "ScoreManager";
     private string heartGoneAnimationStateName = "HeartGone";

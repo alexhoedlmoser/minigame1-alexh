@@ -9,6 +9,13 @@ public class CollectibleDeathdrop : MonoBehaviour
     private string bottomTag = "BottomHitbox";
     private Animator playerAnimator;
     private string badAnimationName = "BeeBad";
+    private HealthManager healthManager;
+    private string healthManagerName = "HealthManager";
+
+    private void Start()
+    {
+        healthManager = GameObject.Find(healthManagerName).GetComponent<HealthManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,7 +23,7 @@ public class CollectibleDeathdrop : MonoBehaviour
 
         if (collision.gameObject.name == playerTag)
         {
-            HealthManager.healthValue -= 3;
+            healthManager.healthValue -= 3;
             Destroy(gameObject, 0f);
             playerAnimator = GameObject.Find(playerTag).GetComponent<Animator>();
             playerAnimator.Play(badAnimationName);

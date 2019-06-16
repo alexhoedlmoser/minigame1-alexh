@@ -53,4 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   persisterName: Score
   objectsToPersist:
-  - {fileID: 11400000, guid: deb1c83ce0607e042ad09c4aac79cd3c, type: 2}
+  - {fileID: 0}

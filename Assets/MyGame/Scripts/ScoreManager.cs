@@ -6,17 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static int scoreValue;
-    [SerializeField] ScoreData scoreData;
+    public int scoreValue;
+    private string scoreKey = "Score";
+    private string highscoreKey = "Highscore";
     private TextMeshProUGUI scoreGui;
-    [SerializeField] TextMeshProUGUI scoreGuiEnd;
-    [SerializeField] TextMeshProUGUI highscoreGuiEnd;
+    private string scoreGuiName = "ScoreGUI";
+    public TextMeshProUGUI scoreGuiEnd;
+    public TextMeshProUGUI highscoreGuiEnd;
     private SceneLoader sceneLoader;
     private int currentSceneIndex;
     private string sceneLoaderName = "SceneLoader";
-    private string scoreGuiName = "ScoreGUI";
-
-    void Awake()
+    
+    void Start()
     {
         scoreValue = 0;
 
@@ -28,6 +29,11 @@ public class ScoreManager : MonoBehaviour
         }
 
         sceneLoader = GameObject.Find(sceneLoaderName).GetComponent<SceneLoader>();
+
+        highscoreGuiEnd.text = "Your Highscore: " + PlayerPrefs.GetInt(highscoreKey, 0).ToString();
+        scoreGuiEnd.text = "Your Score: " + PlayerPrefs.GetInt(scoreKey, 0).ToString();
+
+        PlayerPrefs.Save();
     }
 
     void Update()
@@ -45,19 +51,36 @@ public class ScoreManager : MonoBehaviour
 
     public void SaveScore()
     {
-        scoreData.value = scoreValue;
+        PlayerPrefs.SetInt(scoreKey, scoreValue);
 
-        if (scoreValue > scoreData.highestValue)
+        if (scoreValue > PlayerPrefs.GetInt(highscoreKey, 0))
         {
-            scoreData.highestValue = scoreValue;
+            PlayerPrefs.SetInt(highscoreKey, scoreValue);
         }
+
+        PlayerPrefs.Save();
     }
 
     public void LoadScore()
     {
-        scoreGuiEnd.text = "Your Score: " + scoreData.value.ToString();
-        highscoreGuiEnd.text = "Your Highscore: " + scoreData.highestValue.ToString();
+        scoreGuiEnd.text = "Your Score: " + PlayerPrefs.GetInt(scoreKey, 0).ToString();
+        Debug.Log(PlayerPrefs.GetInt(scoreKey, 0).ToString());
+        highscoreGuiEnd.text = "Your Highscore: " + PlayerPrefs.GetInt(highscoreKey, 0).ToString();
+        Debug.Log(PlayerPrefs.GetInt(highscoreKey, 0).ToString());
 
         sceneLoader.LoadEndScene();
+
+        PlayerPrefs.Save();
     }
+
+    public void ResetScores()
+    {
+        PlayerPrefs.SetInt(highscoreKey, 0);
+        PlayerPrefs.SetInt(scoreKey, 0);
+        highscoreGuiEnd.text = "Your Highscore: " + PlayerPrefs.GetInt(highscoreKey, 0).ToString();
+        scoreGuiEnd.text = "Your Score: " + PlayerPrefs.GetInt(scoreKey, 0).ToString();
+    }
+
 }
+
+
